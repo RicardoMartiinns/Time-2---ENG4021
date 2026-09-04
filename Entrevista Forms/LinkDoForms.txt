@@ -1,1 +1,11 @@
-https://docs.google.com/forms/d/e/1FAIpQLSfeovy7Ovc-HJ4rLfbnAmiRlrYpw6U-M7zeIPWHWILY7GK9yA/viewform
+- Usuário consegue pesquisar por tópicos como:
+1) Esporte (futebol,nfl,nba,baiseball):
+1.a) Dentro desse parte o usuário, conseguiria pesaquisar por tópicos: Time, Seleção, Ligas, Camisas Retrô
+2) Chuteira:
+2.a) Nome específica(ex.:Mercurial)
+3)Artigos esportivos:
+3.a)Cartas colecionáveis, Bonés, Casacos, Bermudas, Quadros de camisas autografadas
+- Para vendedores:
+1) O vendedor ao anunciar o seu produto, precisará preencher um formulário específico para cada artigo esportivo (camisa,chuteira, cartas...) que ao finalizar irá gerar uma nota de 0-5 estrelas.
+2) Vendedor poderá ser avaliado, pelas experiências dos usuários
+3) Os vendedores mais bem avaliados irão aparecer numa caixa "Vendedores mais bem avaliados".
