@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisa 12 - Gerenciamento de Usuários</title>
+    <!-- Vinculação com o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Camisa 12 — Lista de Usuários</h1>
+            <span class="badge-sistema">Painel Administrativo</span>
+        </header>
+
+        <div class="table-responsive">
+            <table class="table-usuarios">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de Linha 1: Produção (teste = 0) -->
+                    <tr>
+                        <td>1</td>
+                        <td>Loja Craque FC</td>
+                        <td>contato@craquefc.com</td>
+                        <td>(11) 98765-4321</td>
+                        <td><span class="badge badge-producao">Produção (0)</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn btn-editar">Editar</button>
+                                <button class="btn btn-excluir">Remover</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Exemplo de Linha 2: Produção (teste = 0) -->
+                    <tr>
+                        <td>2</td>
+                        <td>Carlos Silva</td>
+                        <td>carlos.silva@email.com</td>
+                        <td>(31) 99887-7665</td>
+                        <td><span class="badge badge-producao">Produção (0)</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn btn-editar">Editar</button>
+                                <button class="btn btn-excluir">Remover</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Exemplo de Linha 3: Teste (teste = 1) -->
+                    <tr>
+                        <td>3</td>
+                        <td>Tester QA Automatizado</td>
+                        <td>qa.tester@camisa12.com</td>
+                        <td>(11) 90000-0000</td>
+                        <td><span class="badge badge-homologacao">Teste (1)</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn btn-editar">Editar</button>
+                                <button class="btn btn-excluir">Remover</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
