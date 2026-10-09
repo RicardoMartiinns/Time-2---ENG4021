@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisa 12 - Gerenciamento de Usuários</title>
+    
+    <!-- CSS embutido ou use <link rel="stylesheet" href="listar_usuarios.css"> -->
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #e53935;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* Estilização para alinhar o ícone SVG ao lado do título */
+        .titulo-com-icone {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0;
+        }
+
+        .titulo-com-icone img, 
+        .titulo-com-icone svg {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .badge-sistema {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .table-usuarios {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .table-usuarios th, 
+        .table-usuarios td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table-usuarios th {
+            background-color: #fafafa;
+            color: #666;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .table-usuarios tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .badge-producao {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .badge-homologacao {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-editar {
+            background-color: #2196f3;
+            color: white;
+        }
+
+        .btn-editar:hover {
+            background-color: #1976d2;
+        }
+
+        .btn-excluir {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .btn-excluir:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <!-- Título contendo o arquivo SVG à esquerda -->
+            <div class="titulo-com-icone">
+                <img src="img/icone-camisa.svg" alt="Ícone Camisa 12">
+                <h1>Camisa 12 — Lista de Usuários</h1>
+            </div>
+            <span class="badge-sistema">Painel Administrativo</span>
+        </header>
+
+        <div class="table-responsive">
+            <table class="table-usuarios">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de Linha 1: Produção (teste = 0) -->
+                    <tr>
+                        <td>1</td>
+                        <td>Loja Craque FC</td>
+                        <td>contato@craquefc.com</td>
+                        <td>(11) 98765-4321</td>
+                        <td><span class="badge badge-producao">Produção (0)</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn btn-editar">Editar</button>
+                                <button class="btn btn-excluir">Remover</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Exemplo de Linha 2: Produção (teste = 0) -->
+                    <tr>
+                        <td>2</td>
+                        <td>Carlos Silva</td>
+                        <td>carlos.silva@email.com</td>
+                        <td>(31) 99887-7665</td>
+                        <td><span class="badge badge-producao">Produção (0)</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn btn-editar">Editar</button>
+                                <button class="btn btn-excluir">Remover</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Exemplo de Linha 3: Teste (teste = 1) -->
+                    <tr>
+                        <td>3</td>
+                        <td>Tester QA Automatizado</td>
+                        <td>qa.tester@camisa12.com</td>
+                        <td>(11) 90000-0000</td>
+                        <td><span class="badge badge-homologacao">Teste (1)</span></td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn btn-editar">Editar</button>
+                                <button class="btn btn-excluir">Remover</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
