@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camisa 12 - Gerenciamento de Usuários</title>
     
-    <!-- CSS embutido diretamente no HTML -->
+    <!-- CSS embutido ou use <link rel="stylesheet" href="listar_usuarios.css"> -->
     <style>
         :root {
             --primary-color: #1a1a1a;
@@ -40,6 +40,21 @@
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 20px;
             margin-bottom: 25px;
+        }
+
+        /* Estilização para alinhar o ícone SVG ao lado do título */
+        .titulo-com-icone {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0;
+        }
+
+        .titulo-com-icone img, 
+        .titulo-com-icone svg {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
         }
 
         h1 {
@@ -142,7 +157,11 @@
 
     <div class="container">
         <header class="header">
-            <h1>Camisa 12 — Lista de Usuários</h1>
+            <!-- Título contendo o arquivo SVG à esquerda -->
+            <div class="titulo-com-icone">
+                <img src="icone-camisa.svg" alt="Ícone Camisa 12">
+                <h1>Camisa 12 — Lista de Usuários</h1>
+            </div>
             <span class="badge-sistema">Painel Administrativo</span>
         </header>
 
