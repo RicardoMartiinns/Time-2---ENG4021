@@ -7,12 +7,12 @@
   <title>Sobre | CAMISA 12</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/sobre.css">
+  <link rel="stylesheet" href="{% static 'css/sobre.css' %}">
 </head>
 <body>
 
   <header class="topo">
-    <a href="#" class="logo">
+    <a href="{% url 'Camisa12:home' %}" class="logo">
       <span class="logo-icone">
         <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
           <path d="M8 3 4 6 2 10l4 2v9h12v-9l4-2-2-4-4-3c0 2-2 3-4 3S8 5 8 3Z"/>
@@ -24,8 +24,8 @@
       </span>
     </a>
     <nav class="topo-botoes">
-      <a href="#" class="link-entrar">Entrar</a>
-      <a href="#" class="botao">CRIAR CONTA</a>
+      <a href="{% url 'Camisa12:login' %}" class="link-entrar">Entrar</a>
+      <a href="{% url 'Camisa12:cadastro' %}" class="botao">CRIAR CONTA</a>
     </nav>
   </header>
 

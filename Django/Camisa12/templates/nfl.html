@@ -8,14 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body data-categoria="NFL">
 
   <!-- ===== HEADER ===== -->
   <header class="header">
     <div class="container header__inner">
-      <a href="futebol.html" class="logo">
+      <a href="{% url 'Camisa12:futebol' %}" class="logo">
         <div class="logo__icone"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2" stroke-linejoin="round"><path d="M8 3 3 6l2 5 2-1v11h10V10l2 1 2-5-5-3c0 2-1.8 3-4 3S8 5 8 3z"/></svg></div>
         <div>
           <span class="logo__nome">CAMISA 12</span>
@@ -25,13 +25,13 @@
 
       <nav>
         <ul class="menu">
-        <li><a href="#">Início</a></li>
-        <li><a href="futebol.html">Camisas de Futebol</a></li>
-        <li><a href="nba.html">NBA</a></li>
-        <li><a href="nfl.html" class="ativo">NFL</a></li>
+        <li><a href="{% url 'Camisa12:home' %}">Início</a></li>
+        <li><a href="{% url 'Camisa12:futebol' %}">Camisas de Futebol</a></li>
+        <li><a href="{% url 'Camisa12:nba' %}">NBA</a></li>
+        <li><a href="{% url 'Camisa12:nfl' %}" class="ativo">NFL</a></li>
         <li><a href="#">Chuteiras</a></li>
         <li><a href="#">Acessórios</a></li>
-        <li><a href="#">Lojas</a></li>
+        <li><a href="{% url 'Camisa12:lojas' %}">Lojas</a></li>
         </ul>
       </nav>
 
@@ -41,9 +41,9 @@
       </form>
 
       <div class="acoes">
-        <a href="#" class="acoes__entrar">Entrar</a>
-        <a href="#" class="btn">Criar conta</a>
-        <a href="carrinho.html" class="carrinho" aria-label="Abrir carrinho">
+        <a href="{% url 'Camisa12:login' %}" class="acoes__entrar">Entrar</a>
+        <a href="{% url 'Camisa12:cadastro' %}" class="btn">Criar conta</a>
+        <a href="{% url 'Camisa12:carrinho' %}" class="carrinho" aria-label="Abrir carrinho">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
           <span class="carrinho__qtd" aria-label="0 itens no carrinho">0</span>
         </a>
@@ -251,9 +251,9 @@
         <div>
           <h4>Sobre</h4>
           <ul>
-            <li><a href="#">Quem Somos</a></li>
+            <li><a href="{% url 'Camisa12:sobre' %}">Quem Somos</a></li>
             <li><a href="#">Como Funciona</a></li>
-            <li><a href="#">Lojas Parceiras</a></li>
+            <li><a href="{% url 'Camisa12:lojas' %}">Lojas Parceiras</a></li>
             <li><a href="#">Blog Oficial</a></li>
           </ul>
         </div>
@@ -261,9 +261,9 @@
         <div>
           <h4>Categorias</h4>
           <ul>
-            <li><a href="futebol.html">Camisas Futebol</a></li>
-            <li><a href="nba.html">Camisas NBA</a></li>
-            <li><a href="nfl.html">Camisas NFL</a></li>
+            <li><a href="{% url 'Camisa12:futebol' %}">Camisas Futebol</a></li>
+            <li><a href="{% url 'Camisa12:nba' %}">Camisas NBA</a></li>
+            <li><a href="{% url 'Camisa12:nfl' %}">Camisas NFL</a></li>
             <li><a href="#">Chuteiras</a></li>
           </ul>
         </div>
@@ -292,7 +292,7 @@
     </div>
   </footer>
 
-  <script src="js/catalogo.js"></script>
-  <script src="js/carrinho.js"></script>
+  <script src="{% static 'js/catalogo.js' %}"></script>
+  <script src="{% static 'js/carrinho.js' %}"></script>
 </body>
 </html>
