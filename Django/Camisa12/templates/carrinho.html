@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,13 +10,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/carrinho.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/carrinho.css' %}">
 </head>
 <body data-categoria="Carrinho">
   <header class="header">
     <div class="container header__inner">
-      <a href="futebol.html" class="logo" aria-label="Camisa 12 - voltar ao catálogo">
+      <a href="{% url 'Camisa12:futebol' %}" class="logo" aria-label="Camisa 12 - voltar ao catálogo">
         <div class="logo__icone">
           <svg viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 3 6l2 5 2-1v11h10V10l2 1 2-5-5-3c0 2-1.8 3-4 3S8 5 8 3z"/></svg>
         </div>
@@ -26,15 +28,15 @@
 
       <nav aria-label="Categorias">
         <ul class="menu">
-          <li><a href="futebol.html">Futebol</a></li>
-          <li><a href="nba.html">NBA</a></li>
-          <li><a href="nfl.html">NFL</a></li>
+          <li><a href="{% url 'Camisa12:futebol' %}">Futebol</a></li>
+          <li><a href="{% url 'Camisa12:nba' %}">NBA</a></li>
+          <li><a href="{% url 'Camisa12:nfl' %}">NFL</a></li>
         </ul>
       </nav>
 
       <div class="acoes">
-        <a class="voltar-catalogo" href="futebol.html">Continuar comprando</a>
-        <a href="carrinho.html" class="carrinho" aria-label="Carrinho">
+        <a class="voltar-catalogo" href="{% url 'Camisa12:futebol' %}">Continuar comprando</a>
+        <a href="{% url 'Camisa12:carrinho' %}" class="carrinho" aria-label="Carrinho">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
           <span class="carrinho__qtd" aria-label="0 itens no carrinho">0</span>
         </a>
@@ -54,7 +56,7 @@
         <div class="carrinho-vazio__icone" aria-hidden="true">🛒</div>
         <h2>Seu carrinho está vazio</h2>
         <p>Explore os catálogos e adicione os produtos que você quer comparar.</p>
-        <a href="futebol.html" class="btn">Explorar produtos</a>
+        <a href="{% url 'Camisa12:futebol' %}" class="btn">Explorar produtos</a>
       </div>
 
       <div id="carrinho-conteudo" class="carrinho-layout" hidden>
@@ -78,7 +80,7 @@
           </div>
           <p class="resumo-carrinho__observacao">Frete e condições de compra dependem da loja parceira selecionada.</p>
           <button type="button" id="finalizar-pedido" class="btn resumo-carrinho__finalizar">Continuar</button>
-          <a href="futebol.html" class="resumo-carrinho__voltar">Continuar comprando</a>
+          <a href="{% url 'Camisa12:futebol' %}" class="resumo-carrinho__voltar">Continuar comprando</a>
         </aside>
       </div>
 
@@ -86,6 +88,6 @@
     </div>
   </main>
 
-  <script src="js/carrinho.js"></script>
+  <script src="{% static 'js/carrinho.js' %}"></script>
 </body>
 </html>
