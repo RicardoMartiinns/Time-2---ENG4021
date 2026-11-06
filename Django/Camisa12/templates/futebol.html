@@ -41,14 +41,21 @@
         <input type="search" placeholder="Buscar produtos, times, marcas...">
       </form>
 
-      <div class="acoes">
-        <a href="{% url 'Camisa12:login' %}" class="acoes__entrar">Entrar</a>
-        <a href="{% url 'Camisa12:cadastro' %}" class="btn">Criar conta</a>
-        <a href="{% url 'Camisa12:carrinho' %}" class="carrinho" aria-label="Abrir carrinho">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-          <span class="carrinho__qtd" aria-label="0 itens no carrinho">0</span>
-        </a>
-      </div>
+      
+<div class="acoes">
+  <a href="{% url 'Camisa12:meus_anuncios' %}"
+     class="acoes__entrar">Meus anúncios</a>
+  <a href="{% url 'Camisa12:login' %}" class="acoes__entrar">Entrar</a>
+  <a href="{% url 'Camisa12:cadastro' %}" class="btn">Criar conta</a>
+  <a href="{% url 'Camisa12:carrinho' %}" class="carrinho" aria-label="Abrir carrinho">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round">
+      <path d="M5 8h14l-1 13H6L5 8z"/>
+      <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+    </svg>
+    <span class="carrinho__qtd" aria-label="0 itens no carrinho">0</span>
+  </a>
+</div>
+
     </div>
   </header>
 
