@@ -1,0 +1,53 @@
+.home-hero {
+      padding: 90px 20px;
+      text-align: center;
+      background: linear-gradient(120deg, #080b08, #18351a);
+    }
+    .home-hero h1 {
+      color: white;
+      font-size: clamp(36px, 6vw, 72px);
+      margin-bottom: 18px;
+    }
+    .home-hero p {
+      color: #ddd;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+    .home-categorias {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .home-categorias h2 {
+      color: white;
+      margin-bottom: 25px;
+    }
+    .home-grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+    .home-card {
+      background: #202020;
+      border: 1px solid #363636;
+      border-radius: 12px;
+      padding: 35px 25px;
+      text-align: center;
+    }
+    .home-card h3 {
+      color: white;
+      margin-bottom: 12px;
+    }
+    .home-card p {
+      color: #bbb;
+      margin-bottom: 25px;
+    }
+    .home-link {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 7px;
+      background: #00df80;
+      color: #080808;
+      font-weight: bold;
+      text-decoration: none;
+    }
