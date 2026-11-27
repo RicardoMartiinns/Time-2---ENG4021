@@ -117,12 +117,12 @@
     if (opcoes.rotuloAcessivel) botao.setAttribute('aria-label', opcoes.rotuloAcessivel);
 
     botao.addEventListener('click', () => {
-      paginaAtual = destino;
-      renderizarPagina();
-      catalogo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    paginaAtual = destino;
+    aplicarFiltros();
+    catalogo.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     return botao;
-  }
+    }
 
   function renderizarPaginacao(totalPaginas) {
     if (!paginacao) return;
